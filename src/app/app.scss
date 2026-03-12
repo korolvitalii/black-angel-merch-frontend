@@ -1,0 +1,143 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  color: #f6efe8;
+}
+
+.shell {
+  min-height: 100dvh;
+  padding: 3rem 1.5rem;
+  background:
+    radial-gradient(circle at top, rgb(143 29 23 / 0.3), transparent 35%),
+    linear-gradient(180deg, #120b0c 0%, #261215 55%, #140b0b 100%);
+}
+
+.hero,
+.panel {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 2rem 0 3rem;
+}
+
+.eyebrow,
+.section-label,
+.sku,
+.status,
+.pill {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 0.95;
+  margin: 0;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.lede {
+  max-width: 42rem;
+  font-size: 1.1rem;
+  color: rgb(246 239 232 / 0.76);
+  margin: 1.25rem 0 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.9rem 1.35rem;
+  background: linear-gradient(135deg, #f26a4b 0%, #f0bf78 100%);
+  color: #1b0d0d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.status,
+.pill {
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background: rgb(255 255 255 / 0.04);
+}
+
+.panel {
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 28px;
+  padding: 1.5rem;
+  backdrop-filter: blur(18px);
+  background: rgb(255 255 255 / 0.04);
+}
+
+.panel-heading,
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.panel-heading {
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  padding: 1.25rem;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.1), rgb(255 255 255 / 0.04));
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.card p {
+  color: rgb(246 239 232 / 0.74);
+}
+
+.card h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.card-footer {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding-inline: 1rem;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .panel-heading,
+  .card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
