@@ -1,0 +1,45 @@
+<main class="shell">
+  <section class="hero">
+    <p class="eyebrow">Angular 21 + NgRx</p>
+    <h1>Black Angel merch storefront starter</h1>
+    <p class="lede">
+      A standalone Angular application with router, store, effects, router-store, and
+      devtools already wired.
+    </p>
+
+    <div class="hero-actions">
+      <button type="button" (click)="reloadCatalog()">Reload catalog</button>
+      @if (loading()) {
+        <span class="status">Syncing demo inventory...</span>
+      } @else {
+        <span class="status">Store ready</span>
+      }
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-heading">
+      <div>
+        <p class="section-label">Featured drops</p>
+        <h2>Catalog state from NgRx</h2>
+      </div>
+      <span class="pill">{{ products().length }} items</span>
+    </div>
+
+    <div class="grid">
+      @for (product of products(); track product.id) {
+        <article class="card">
+          <p class="sku">{{ product.sku }}</p>
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.description }}</p>
+          <div class="card-footer">
+            <span>{{ product.price | currency }}</span>
+            <span>{{ product.tag }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</main>
+
+<router-outlet />
